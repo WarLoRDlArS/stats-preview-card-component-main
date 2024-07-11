@@ -1,0 +1,117 @@
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+}
+
+picture {
+    position: relative;
+}
+
+img {
+    position: relative;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.image-color {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 77%, 22%);
+    filter: opacity(0.5) hue-rotate(345deg);
+}
+
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 0% 10% 0%;
+    background-color: hsl(244, 38%, 16%);
+    margin: 25% 5% 25% 5%;
+    border-radius: 8px;
+}
+
+.main-heading{
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding: 5%;
+}
+
+.main-paragraph{
+    color: hsla(0, 0%, 100%, 0.75);
+    text-align: center;
+    padding: 0% 10% 5% 10%;
+}
+
+.stat-container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.stat-count h1{
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0px;
+}
+
+.stat-heading{
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.stat-item{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: 0px;
+}
+
+@media (min-width: 1280px){
+    .container{
+        align-content: start;
+        column-gap: 0px;
+        margin: 15vh 10vw 20vh 10vw;
+        height: 50vh;
+        width: 80vw;
+        padding-bottom: 0px 0px 5% 0px;
+        border-radius: 8px;
+        flex-flow: column wrap;
+    }
+    
+    picture {
+        order: 2;
+        width: 50%;
+        height: 100%;
+        margin: 0px 0px -10% 0px;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-heading{
+        order: 1;
+        width: 50%;
+        margin: 0px;
+    }
+
+    .main-paragraph{
+        order: 1;
+        width: 50%;
+        margin: 0px;
+    }
+
+    .stat-container{
+        order: 1;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        width: 50%;
+        margin: 0px;
+    } 
+}
