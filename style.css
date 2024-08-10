@@ -1,26 +1,27 @@
 
 body {
     background-color: hsl(233, 47%, 7%);
-    font-size: 15px;
+    font-size: 90%;
 }
 
-picture {
+picture{
     position: relative;
+    filter: hue-rotate(345deg);
 }
 
 img {
-    position: relative;
+    /* position: absolute; */
     border-radius: 8px 8px 0px 0px;
+    filter: hue-rotate(345deg);
 }
 
 .image-color {
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
+    left: 0px;
+    top: 0px;
     width: 100%;
     height: 100%;
     background-color: hsl(277, 77%, 22%);
-    filter: opacity(0.5) hue-rotate(345deg);
 }
 
 .container{
@@ -30,8 +31,17 @@ img {
     align-items: center;
     padding: 0% 0% 10% 0%;
     background-color: hsl(244, 38%, 16%);
-    margin: 25% 5% 25% 5%;
     border-radius: 8px;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    width: 85vw;
+}
+
+@media (min-width: 740px) {
+    .container{
+        width: 643px;
+    }
 }
 
 .main-heading{
@@ -69,49 +79,67 @@ img {
     flex-flow: column nowrap;
     text-align: center;
     margin: 0px;
+    margin-bottom: 15px;
 }
 
 @media (min-width: 1280px){
     .container{
         align-content: start;
         column-gap: 0px;
-        margin: 15vh 10vw 20vh 10vw;
-        height: 50vh;
-        width: 80vw;
+        margin: 20vh 15vw 10vh 15vw;
+        height: 55vh;
+        width: 70vw;
         padding-bottom: 0px 0px 5% 0px;
         border-radius: 8px;
         flex-flow: column wrap;
+        padding: 0px;
+        align-content: space-between;
     }
     
     picture {
-        order: 2;
+        order: 3;
         width: 50%;
         height: 100%;
-        margin: 0px 0px -10% 0px;
+        margin: 0px;
+        align-self: flex-end;
     }
 
     img{
+        margin: 0px;
+        padding: 0px;
         width: 100%;
         height: 100%;
+        border-radius: 0px 8px 8px 0px;
+        filter: hue-rotate(90deg);
     }
 
     .main-heading{
+        padding: 0px;
+        padding: 1% 2% 2% 5%;
         order: 1;
-        width: 50%;
-        margin: 0px;
+        width: 40%;
+        align-self: start;
+        text-align: left;
+        margin-top: -5%;
+        margin-bottom: 0px;
     }
 
     .main-paragraph{
         order: 1;
-        width: 50%;
+        width: 30%;
         margin: 0px;
+        text-align: left;
+        align-self: start;
+        padding: 1% 2% 5% 5%;
     }
 
     .stat-container{
         order: 1;
         flex-flow: row nowrap;
         justify-content: space-around;
-        width: 50%;
-        margin: 0px;
+        width: 40%;
+        margin: 0px 0px 0% 3%;
+        align-items: start;
+        align-self: start;
     } 
 }
